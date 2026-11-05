@@ -87,7 +87,7 @@
       const left = s.close - m;
       if (next && next[0] > s.close) {
         const sub = `Open now until ${fmt(s.close)}`;
-        if (left <= 60) return { cls: "s-open", text: `Break in ${left} min · back ${fmt(next[0])}`, sub };
+        if (left <= 60) return { cls: "s-open", text: `Break in ${left} min · Back ${fmt(next[0])}`, sub };
         const lc = lastClose(w, d);
         return { cls: "s-open", text: `Reopens ${fmt(next[0])} · Open until ${fmt(lc)}${tonightSuffix(lc)}`, sub };
       }
@@ -98,7 +98,7 @@
     }
     if (!s.known) return { cls: "s-closed", text: "Today's hours not listed" };
     if (next && earlierWindow(w, d, m)) return { cls: "s-closed", text: `Closed now · Reopens ${fmt(next[0])} until ${fmt(next[1])}` };
-    if (next) return { cls: "s-closed", text: `Closed · opens ${fmt(next[0])}` };
+    if (next) return { cls: "s-closed", text: `Closed · Opens ${fmt(next[0])}` };
     return { cls: "s-closed", text: "Closed now" };
   }
   // Close used for Tonight, Closes latest/soonest, and the order inside Open now first.
