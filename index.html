@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="utf-8">
+<script>
+  // start the data downloads before anything else: the County index and the County you'll most likely see (link, last pick, or Lancaster)
+  (function(){try{var j=function(u){var p=fetch(u,{cache:"no-cache"}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()});p.catch(function(){});return p};
+  var q=new URLSearchParams(location.search),c=q.get("county"),s=null;
+  if(!c&&!q.get("area")){try{s=JSON.parse(localStorage.getItem("openlate.sel")||"null")}catch(e){}c=s&&s.county?s.county:(s&&s.area?"":"lancaster")}
+  window.__olIdx=j("https://openlateapp.com/data/index.json");c={"md-washington-dc":"washington-dc"}[c]||c;if(c&&c!=="all"&&/^[a-z-]+$/.test(c))window.__olPre={id:c,p:j("https://openlateapp.com/data/county/"+c+".json")}}catch(e){}})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Open Late · PA, MD, DE, DC, GA, FL, VA, WV, SC, NC, NJ & NY restaurants & bars open late, kitchen hours & specials</title>
+<meta name="description" content="Find restaurants and bars in Pennsylvania, Maryland, Delaware, DC, Georgia, Florida, Virginia, West Virginia, South Carolina, North Carolina, New Jersey and New York open late tonight: who's open now, whose kitchen is still serving, plus happy hours and wing and beer specials by day, county by county.">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Open Late">
+<meta property="og:title" content="Open Late · Who's open late near you in PA, MD, DE, DC, GA, FL, VA, WV, SC, NC, NJ & NY">
+<meta property="og:description" content="Restaurants and bars open late, kitchens still serving, happy hours and wing and beer specials, across Pennsylvania, Maryland, Delaware, DC, Georgia, Florida, Virginia, West Virginia, South Carolina, North Carolina, New Jersey and New York.">
+<meta property="og:url" content="https://openlateapp.com/">
+<meta property="og:image" content="https://openlateapp.com/icons/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Open Late: a crescent moon logo with the words Open Late. Who's open late, whose kitchen is still serving and tonight's specials, across Pennsylvania, Maryland, Delaware, DC, Georgia, Florida, Virginia, West Virginia, South Carolina, North Carolina, New Jersey and New York.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Open Late · Who's open late near you in PA, MD, DE, DC, GA, FL, VA, WV, SC, NC, NJ & NY">
+<meta name="twitter:description" content="Restaurants and bars open late, kitchens still serving, happy hours and wing and beer specials, across Pennsylvania, Maryland, Delaware, DC, Georgia, Florida, Virginia, West Virginia, South Carolina, North Carolina, New Jersey and New York.">
+<meta name="twitter:image" content="https://openlateapp.com/icons/og-image.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Open Late","url":"https://openlateapp.com/","description":"Restaurants and bars open late in Pennsylvania, Maryland, Delaware, DC, Georgia, Florida, Virginia, West Virginia, South Carolina, North Carolina, New Jersey and New York: hours, kitchen hours, happy hours and specials.","inLanguage":"en-US","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://openlateapp.com/?q={search_term_string}"},"query-input":"required name=search_term_string"}}
+</script>
+<meta name="theme-color" content="#14161f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Open Late">
+<link rel="stylesheet" href="styles.css?v=246">
+<script src="config.js"></script>
+<style>.testribbon{position:fixed;top:14px;right:-38px;z-index:9999;transform:rotate(45deg);background:#d22;color:#fff;font:700 11px/1 system-ui,sans-serif;letter-spacing:.08em;padding:5px 40px;pointer-events:none;box-shadow:0 2px 6px rgba(0,0,0,.3)}</style>
+</head>
+<body>
+<div class="testribbon" aria-hidden="true">TEST SITE</div>
+<aside class="social" aria-label="Follow Open Late on social media"><span class="soc-lbl">Follow Open Late</span><a href="https://www.facebook.com/profile.php?id=61595789025720" target="_blank" rel="noopener" aria-label="Open Late on Facebook"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.1v2.4H7.7V14h2.7v8z"/></svg></a><a href="https://www.instagram.com/theopenlateapp/" target="_blank" rel="noopener" aria-label="Open Late on Instagram"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a href="https://x.com/TheOpenLateApp" target="_blank" rel="noopener" aria-label="Open Late on X"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.2-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></svg></a><span class="soc-handle">@theopenlateapp</span></aside><header class="top" id="top">
+  <div class="bar">
+    <a class="brand" href="./" aria-label="Open Late home">
+      <img src="icons/logo.svg" alt="" width="30" height="30">
+      <span class="word">Open <b>Late</b></span>
+    </a>
+    <div class="now" id="now" aria-live="polite"></div>
+    <div class="searchwrap" id="searchwrap">
+      <label class="sr" for="q">Search by name or city</label>
+      <input id="q" type="search" placeholder="Search by name or city" autocomplete="off" enterkeyhint="search">
+    </div>
+    <button type="button" class="iconbtn favbtn" id="favsOnly" aria-pressed="false" aria-label="Show only my favorites" title="Favorites"><span aria-hidden="true">♥</span><span class="favct" id="favCt" hidden></span></button>
+    <button type="button" class="iconbtn" id="tnBell" aria-label="Tonight alerts" title="Tonight alerts">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 1.5h-15z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M10 20.5a2 2 0 0 0 4 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+    </button>
+    <button type="button" class="iconbtn" id="searchBtn" aria-label="Search" aria-expanded="false" aria-controls="searchwrap">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="pickers">
+    <label class="pick"><span>State</span><select id="state" aria-label="State"></select></label>
+    <label class="pick"><span>County</span><select id="county" aria-label="County"></select></label>
+    <label class="pick"><span>City</span><select id="town" aria-label="City"></select></label>
+  </div>
+  <div class="chipbar">
+  <div class="chiprow" role="group" aria-label="Filters">
+    <button type="button" class="chip" id="tonight" aria-pressed="false" title="Places open past 11 PM tonight; late kitchens first">🌙 Tonight</button>
+    <button type="button" class="chip" id="nearMe" aria-pressed="false" title="Sort by distance from you (asks for your location)">📍 Near me</button>
+    <button type="button" class="chip" id="kitchenNow" aria-pressed="false" title="Only places that publish a kitchen close time">Kitchen open</button>
+    <button type="button" class="chip" id="wingDeals" aria-pressed="false">🍗 Wing deals</button>
+    <button type="button" class="chip" id="beerDeals" aria-pressed="false">🍺 Beer deals</button>
+    <button type="button" class="chip" id="hhDeals" aria-pressed="false">🍸 Happy hour</button>
+    <button type="button" class="chip" id="kkNights" aria-pressed="false" title="Karaoke on the picked day (from the place's own posts or website)">🎤 Karaoke</button>
+    <button type="button" class="chip" id="djNights" aria-pressed="false" title="DJ nights on the picked day (from the place's own posts or website)">🎧 DJ</button>
+    <button type="button" class="chip" id="lmNights" aria-pressed="false" title="Live music on the picked day (regular shows from the venue's own site, ticketing pages, posts or local guides)">🎸 Live music</button>
+    <button type="button" class="chip" id="tvNights" aria-pressed="false" title="Trivia on the picked day (from the place's own website)">🧠 Trivia</button>
+    <button type="button" class="chip" id="bgNights" aria-pressed="false" title="Bingo on the picked day (from the place's own website)">🎱 Bingo</button>
+    <button type="button" class="chip" id="gdSpots" aria-pressed="false" title="Game day spots and watch parties (from the place's own website or a team's official fan club list)">🏈 Game day</button>
+    <button type="button" class="chip" id="odSeats" aria-pressed="false" title="Outdoor seating: patio, deck, rooftop and more (from the place's own website or OpenStreetMap)">☀️ Outdoor</button>
+    <button type="button" class="chip" id="onlyDeals" aria-pressed="false">Any deal</button>
+  </div>
+  </div>
+</header>
+
+<main>
+  <div class="filterrow">
+  <div class="seg seg-row" role="group" aria-label="View">
+    <button type="button" id="viewList" aria-pressed="true">☰ List</button>
+    <button type="button" id="viewMap" aria-pressed="false">🗺 Map</button>
+  </div>
+  <div class="clockdd" id="atChip">
+    <button type="button" id="clockBtn" aria-haspopup="true" aria-expanded="false" aria-controls="clockPanel" aria-label="Day and time: now"><span id="clockLbl">🕘 now</span></button>
+    <div class="clockpanel" id="clockPanel" hidden>
+      <div class="clk-h">Day</div><div class="clk-days" id="clkDays" role="group" aria-label="Day"></div>
+      <div class="clk-h">Time</div><div class="clk-times" id="clkTimes" role="group" aria-label="Time"></div>
+    </div>
+    <select id="day" aria-label="Deals and nights for day" hidden></select><select id="atTime" aria-label="Open at" hidden></select>
+  </div>
+  <details class="more-filters" id="moreFilters">
+    <summary>More filters <span class="mf-count" id="mfCount"></span></summary>
+    <div class="controls">
+      <label class="field"><span>Cuisine</span><select id="cuisine"></select></label>
+      <label class="field"><span>Price</span><select id="price">
+        <option value="All">Any price</option><option>$</option><option>$$</option><option>$$$</option><option>$$$$</option><option value="none">Price not listed</option>
+      </select></label>
+      <label class="field"><span>Vibe</span><select id="vibe"></select></label>
+      <label class="field"><span>Sort</span><select id="sort">
+        <option value="smart" selected>Open now first</option><option value="name">A–Z</option><option value="late">Closes latest</option><option value="soon">Closes soonest</option><option value="near">Near me</option>
+      </select></label>
+    </div>
+    <p class="hint">"Kitchen open" only includes places that publish a kitchen close time. Deal filters follow the day you pick in the first chip.</p>
+  </details>
+  </div>
+
+  <div class="viewbar">
+    <p class="count" id="count"></p>
+  </div>
+  <p class="tonight-note" id="tonightNote" hidden></p>
+  <div class="mapwrap" id="mapwrap" hidden>
+    <div id="map" role="region" aria-label="Map of the places in this list"></div>
+    <p class="maplegend"><span><i class="lg lg-open"></i>Open</span><span><i class="lg lg-soon"></i>Closing within an hour</span><span><i class="lg lg-closed"></i>Closed / hours not listed</span><span id="mapMiss"></span></p>
+  </div>
+  <p class="notice" id="tnBanner" hidden></p>
+  <p class="notice" id="tnInvite" hidden><span id="tnInviteText"></span> <button type="button" class="btn" id="tnInviteOn">Turn on</button> <button type="button" class="btn ghost" id="tnInviteNo">Not now</button></p>
+  <div class="elsewhere" id="elsewhere" aria-live="polite" hidden></div>
+  <div class="grid" id="list"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <p class="morewrap"><button type="button" class="btn more" id="more" hidden>Show more</button></p>
+  <div class="empty" id="empty" hidden>
+    <svg viewBox="0 0 64 64" width="48" height="48" aria-hidden="true"><circle cx="28" cy="34" r="18" fill="#e8a33d"/><circle cx="37" cy="27" r="16" fill="var(--bg)"/></svg>
+    <p class="empty-title" id="emptyTitle">Nothing matches right now</p>
+    <p class="empty-text" id="emptyText"></p>
+    <div class="empty-actions">
+      <button type="button" class="btn" id="clearFilters" hidden>Clear filters</button>
+      <button type="button" class="btn ghost" id="seeCounty" hidden>See all of Lancaster County</button>
+    </div>
+  </div>
+  <p class="notice">Hours and specials change often, so call ahead. Everything for <span id="cityName">Lancaster County, PA</span> was checked <span id="checked">Oct 31, 2026</span>; anything a source didn't publish shows as "not listed".</p>
+</main>
+
+<footer class="foot">
+  <p class="footbtns"><a id="suggest" class="btn" href="#" data-form="suggest">Suggest an update</a> <a class="btn ghost" href="#" data-form="add">Add a place</a></p>
+  <p>Know a special, a closing time, or a change? Restaurants and visitors can send it in. <a href="#" data-form="claim" class="claimlink">Own a bar? Claim your listing</a>.</p>
+  <p class="small">Sources: each venue's Facebook page and website, plus local guides such as TasteLanc and OpenTable (the source is named on every card). Not affiliated with any restaurant. <a href="https://openlateapp.com/counties/">Browse by County</a></p>
+  <p class="kofi-foot" id="kofiFoot" hidden><a id="kofiLink" href="#" target="_blank" rel="noopener">☕ Support Open Late</a></p>
+  <p class="kofi-foot support-foot">Questions or corrections? <a href="mailto:support@openlateapp.com">support@openlateapp.com</a> · <a href="#" id="tnOpen">🔔 Tonight alerts</a> · <a href="https://openlateapp.com/featured.html">Get featured</a> · <a href="privacy.html">Privacy</a></p>
+</footer>
+<div class="kofisheet" id="kofiSheet" role="dialog" aria-labelledby="kofiTitle" aria-describedby="kofiText" hidden>
+  <button type="button" class="fx kofix" id="kofiX" aria-label="Close">✕</button>
+  <h2 id="kofiTitle">☕ Enjoying Open Late?</h2>
+  <p id="kofiText">Open Late is an independent project with no corporate backing. Your donation helps keep hours, specials, and deals up to date, and lets us keep expanding into other states and areas.</p>
+  <div class="kofibtns"><a class="btn" id="kofiGo" href="#" target="_blank" rel="noopener">Leave a tip on Ko-fi</a><button type="button" class="btn ghost" id="kofiLater">Maybe later</button></div>
+</div>
+<dialog id="tnDlg" aria-labelledby="tnTitle">
+  <form id="tnForm" method="dialog" novalidate>
+    <div class="fhead"><h2 id="tnTitle">Tonight in my county</h2><button type="button" class="fx" id="tnClose" aria-label="Close">✕</button></div>
+    <p class="fsub">Pick your counties and what you're into. When you open Open Late you'll see what's on tonight. In the Open Late app you also get one notification a day at the time you pick.</p>
+    <fieldset class="ff"><legend>Counties</legend>
+      <div class="fchecks" id="tnCounties"></div>
+      <label class="ff"><span>Add a county</span><select id="tnAdd"></select></label>
+    </fieldset>
+    <fieldset class="ff"><legend>What to include</legend>
+      <div class="fchecks" id="tnKinds"></div>
+    </fieldset>
+    <label class="ff"><span>Notification time (app)</span><input id="tnTime" type="time" value="17:00" step="900"></label>
+    <p class="fsub" id="tnPerm" hidden>Notifications are off for Open Late on this phone. To get tonight's alert, open your phone's Settings → Notifications → Open Late (Android: Settings → Apps → Open Late → Notifications) and allow them, then tap Save again.</p>
+    <p class="fsub" id="tnMsg" role="status"></p>
+    <div class="fbtns"><button type="submit" class="btn" id="tnSave">Save</button><button type="button" class="btn ghost" id="tnOff">Turn off</button></div>
+  </form>
+</dialog>
+<dialog id="formDlg" aria-labelledby="fTitle">
+  <form id="sForm" method="dialog" novalidate>
+    <div class="fhead"><h2 id="fTitle">Suggest an update</h2><button type="button" class="fx" id="fClose" aria-label="Close">✕</button></div>
+    <p class="fsub" id="fSub">Tell us what's wrong or missing. We check every change against a source before it goes live.</p>
+    <label class="ff"><span>Place</span><input id="fPlace" name="place" type="text" maxlength="120" required autocomplete="off" placeholder="Restaurant or bar name"></label>
+    <label class="ff" id="fWhereRow"><span>City and County</span><input id="fWhere" name="where" type="text" maxlength="120" autocomplete="off"></label>
+    <div id="fClaimSet" hidden>
+      <label class="ff"><span>Place link or ID (filled in for you)</span><input id="fLink" name="placeLink" type="text" maxlength="300" autocomplete="off"></label>
+      <label class="ff"><span>Your role</span><input id="fRole" name="role" type="text" maxlength="80" autocomplete="organization-title" placeholder="Owner, general manager, marketing…"></label>
+    </div>
+    <label class="ff" id="fAddrRow" hidden><span>Address (if you know it)</span><input id="fAddr" name="address" type="text" maxlength="160" autocomplete="off"></label>
+    <fieldset class="ff" id="fWhatSet"><legend>What's wrong or missing?</legend>
+      <div class="fchecks">
+        <label><input type="checkbox" name="what" value="Hours"> Hours</label>
+        <label><input type="checkbox" name="what" value="Kitchen hours"> Kitchen hours</label>
+        <label><input type="checkbox" name="what" value="Happy hour"> Happy hour</label>
+        <label><input type="checkbox" name="what" value="Specials"> Specials</label>
+        <label><input type="checkbox" name="what" value="Phone"> Phone</label>
+        <label><input type="checkbox" name="what" value="Closed"> Closed for good</label>
+        <label><input type="checkbox" name="what" value="Other"> Something else</label>
+      </div>
+    </fieldset>
+    <div id="fRepSet" hidden>
+      <fieldset class="ff"><legend>What's wrong?</legend>
+        <div class="fchecks">
+          <label><input type="checkbox" name="rep" value="Closed now"> Closed now (but listed open)</label>
+          <label><input type="checkbox" name="rep" value="Wrong close time"> Wrong close time</label>
+          <label><input type="checkbox" name="rep" value="Wrong kitchen hours"> Wrong kitchen hours</label>
+          <label><input type="checkbox" name="rep" value="Permanently closed"> Permanently closed</label>
+          <label><input type="checkbox" name="rep" value="Other"> Something else</label>
+        </div>
+      </fieldset>
+      <fieldset class="ff"><legend>Which day(s)? (optional)</legend>
+        <div class="fchecks">
+          <label><input type="checkbox" name="repDay" value="Mon"> Mon</label><label><input type="checkbox" name="repDay" value="Tue"> Tue</label><label><input type="checkbox" name="repDay" value="Wed"> Wed</label><label><input type="checkbox" name="repDay" value="Thu"> Thu</label><label><input type="checkbox" name="repDay" value="Fri"> Fri</label><label><input type="checkbox" name="repDay" value="Sat"> Sat</label><label><input type="checkbox" name="repDay" value="Sun"> Sun</label>
+        </div>
+      </fieldset>
+    </div>
+    <label class="ff"><span id="fDetailsLbl">Details</span><textarea id="fDetails" name="details" rows="4" maxlength="2000" required placeholder="e.g. Kitchen closes at 11 PM Fri–Sat; $0.75 wings on Tuesdays. A link or menu photo URL helps."></textarea></label>
+    <div class="frow2">
+      <label class="ff"><span>Your name (optional)</span><input id="fName" name="name" type="text" maxlength="80" autocomplete="name"></label>
+      <label class="ff"><span>Email (optional, only to follow up)</span><input id="fEmail" name="email" type="email" maxlength="120" autocomplete="email"></label>
+    </div>
+    <label class="ff" id="fPhoneRow" hidden><span>Phone (if you'd rather we call or text to confirm)</span><input id="fPhone" name="phone" type="tel" maxlength="40" autocomplete="tel"></label>
+    <label class="fown"><input type="checkbox" id="fOwn" name="owner" value="yes"> I own or work here <span class="fhint">(claim this listing: we'll email you to confirm, then keep it up to date for you)</span></label>
+    <label class="hp" aria-hidden="true">Leave this empty <input type="text" name="_honey" id="fHoney" tabindex="-1" autocomplete="off"></label>
+    <p class="fmsg" id="fMsg" role="status" aria-live="polite"></p>
+    <div class="fbtns"><button type="submit" class="btn" id="fSend">Send</button><button type="button" class="btn ghost" id="fCancel">Cancel</button></div>
+    <p class="small">Sent to the Open Late editor by email through FormSubmit.co. We don't publish your name or email.</p>
+  </form>
+</dialog>
+<script src="app.js?v=246" defer></script>
+</body>
+</html>
