@@ -284,14 +284,33 @@ dialog#formDlg::backdrop,dialog#tnDlg::backdrop{background:rgba(10,12,18,.55)}
   .chipbar .chiprow{display:contents}
 }
 
+/* test site: slim amber "Mobile app coming soon" strip. One phrase glides across the free space and stays fully on screen.
+   Reduced motion (and a too-narrow fit) keeps that line centered and static, with no Pause control. */
+.appsoon{display:flex;align-items:center;gap:8px;max-width:100%;overflow:hidden;box-sizing:border-box;min-height:calc(32px + env(safe-area-inset-top));padding:env(safe-area-inset-top) 8px 0 0;background:#e8a33d;color:#14161f;font-size:clamp(12.5px,3.4vw,14px);font-weight:700;letter-spacing:.01em;line-height:1.2}
+.appsoon-view{flex:1 1 auto;min-width:0;overflow:hidden;display:flex;align-items:center;height:32px;padding:0 8px 0 12px}
+.appsoon:not(.is-live) .appsoon-view{justify-content:center}
+.appsoon-msg{margin:0;white-space:nowrap}
+.appsoon.is-live .appsoon-msg{animation:appsoon-glide var(--glide,14s) linear infinite alternate}
+.appsoon.is-paused .appsoon-msg{animation-play-state:paused}
+.appsoon-pause{flex:none;min-width:52px;height:26px;margin-right:2px;padding:0 10px;border-radius:999px;border:1px solid rgba(20,22,31,.45);background:#14161f;color:#e8a33d;font:700 .72rem/1 system-ui,sans-serif;cursor:pointer}
+.appsoon-pause:hover{background:#2a2e3d;color:#ffd48a}
+.appsoon-pause:focus-visible{outline:2px solid #14161f;outline-offset:2px}
+.appsoon:not(.is-live) .appsoon-pause{display:none}
+@keyframes appsoon-glide{from{transform:translateX(0)}to{transform:translateX(var(--travel,0px))}}
+@media (prefers-reduced-motion:reduce){
+  .appsoon-msg{animation:none!important;transform:none!important}
+  .appsoon-view{justify-content:center}
+  .appsoon-pause{display:none!important}
+}
+.appsoon + .social{padding-top:8px}
 /* v191: slim social strip above the header (version A) */
 .social{background:#14161f;color:#f2eeea;font-size:13px;font-weight:600;line-height:1.2;display:flex;align-items:center;justify-content:center;gap:12px;padding:calc(8px + env(safe-area-inset-top)) 12px 8px}
 .social a{color:#e8a33d;display:inline-flex;align-items:center;justify-content:center;min-width:24px;min-height:24px}
 .social a:hover,.social a:focus-visible{color:#ffc46b}
 .social svg{display:block}
 .social .soc-handle{color:#a8a19b;font-weight:400}
-/* v192: the strip is the topmost element, so only it takes the iOS standalone safe-area inset; the header sits right under it
-   (no doubled inset) and, once stuck, stops below the status bar, which a fixed cover keeps dark. env() is 0 in a normal browser tab. */
+/* v192: the coming-soon strip is the topmost element and takes the iOS standalone safe-area inset (the social strip does not add a second one).
+   The header sits under the social strip and, once stuck, stops below the status bar, which a fixed cover keeps dark. env() is 0 in a normal browser tab. */
 .social + .top{padding-top:8px;top:env(safe-area-inset-top)}
 .social::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top);background:#14161f;z-index:11;pointer-events:none}
 #tnBanner{margin:0 0 12px}#tnBanner a{color:inherit;font-weight:600}
